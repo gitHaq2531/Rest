@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.client.ShoppersStack.BackendApiTesting.WishlistTest"/>
+      <class name="com.client.ShoppersStack.BackendApiTesting.AddressTest"/>
+      <class name="com.client.ShoppersStack.BackendApiTesting.CartTest"/>
+      <class name="com.client.ShoppersStack.BackendApiTesting.OrderTest"/>
+      <class name="com.client.ShoppersStack.BackendApiTesting.ProductsTest"/>
+      <class name="com.client.ShoppersStack.BackendApiTesting.ReviewTest"/>
+      <class name="com.client.ShoppersStack.BackendApiTesting.DeleteTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
