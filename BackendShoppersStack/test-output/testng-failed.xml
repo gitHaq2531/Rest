@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.client.ShoppersStack.BackendApiTesting.CartTestWithGUI">
+      <class name="com.client.ShoppersStack.BackendApiTesting.ProductsTest">
         <methods>
-          <include name="addToCart"/>
           <include name="beforeClass"/>
+          <include name="viewProducts"/>
           <include name="afterSuite"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
         </methods>
-      </class> <!-- com.client.ShoppersStack.BackendApiTesting.CartTestWithGUI -->
+      </class> <!-- com.client.ShoppersStack.BackendApiTesting.ProductsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

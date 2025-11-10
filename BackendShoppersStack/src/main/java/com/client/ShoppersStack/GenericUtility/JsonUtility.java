@@ -14,7 +14,9 @@ public String getDataOnJsonBody(Response resp,String jsonpath)
 
 public void verifyDataInJsonBody(Response resp,String jsonpath,String expectedData)
 {
+	
 	List<String> list = JsonPath.read(resp.asString(), jsonpath);
+
 	boolean flag=false;
 	for(String lst : list)
 	{

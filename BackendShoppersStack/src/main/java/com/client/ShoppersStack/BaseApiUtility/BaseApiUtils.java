@@ -19,7 +19,7 @@ public class BaseApiUtils
 {
 	public static String token;
 	public static String shopperId;
-	public RequestSpecification reqSpec;
+	public static RequestSpecification reqSpec;
 	FileUtility fLib=new FileUtility();
 	public String baseURI;
 
@@ -36,6 +36,9 @@ public class BaseApiUtils
 		jObj.put("password", fLib.getDataFromProperty("password"));
 		jObj.put("role", fLib.getDataFromProperty("role"));
 		
+		//to handle javax.net.ssl.SSLHandshakeException:
+		RestAssured.useRelaxedHTTPSValidation();
+		
 		Response resp = given()
 							.contentType(ContentType.JSON)
 							.body(jObj)
@@ -50,6 +53,7 @@ public void beforeClass() throws IOException
 {	
 	RequestSpecBuilder reqBuilder = new RequestSpecBuilder();
 	reqBuilder.setContentType(ContentType.JSON);
+	
 	reqBuilder.setAuth(RestAssured.oauth2(token));
 	reqBuilder.setBaseUri(fLib.getDataFromProperty("ShoppersBaseUrl"));
 	reqSpec = reqBuilder.build();
